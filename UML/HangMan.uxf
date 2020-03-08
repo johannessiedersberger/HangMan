@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>204</y>
+      <w>336</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;HangManDrawer&gt;&gt;
+
+--
++DrawGame(HangManGame: game): void
++AskForLetter(): string
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>204</y>
+      <w>252</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;HangManGame&gt;&gt;
+
+--
+_-WordToGuess: string_
+_-HangManState: int_
+_-LettersPicked: string[]_
+_-CurrentWordState: string_
+--
+#Operation(i: int): int
++AddLetter(letter: string): void
++GetWord(): string
++GetHangManState(): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
