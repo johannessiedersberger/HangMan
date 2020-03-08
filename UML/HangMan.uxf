@@ -29,10 +29,10 @@
     <panel_attributes>&lt;&lt;HangManGame&gt;&gt;
 
 --
-_-WordToGuess: string_
-_-HangManState: int_
-_-LettersPicked: string[]_
-_-CurrentWordState: string_
+_-wordToGuess: string_
+_-hangManState: int_
+_-lettersPicked: string[]_
+_-currentWordState: string_
 --
 #Operation(i: int): int
 +AddLetter(letter: string): void

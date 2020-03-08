@@ -152,6 +152,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HangMan.cpp" />
+    <ClCompile Include="HangManGame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HangManGame.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
