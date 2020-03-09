@@ -2,10 +2,12 @@
 //
 
 #include <iostream>
+#include "HangManGame.hpp"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+  HangManGame game{ "Machine Learning" };
+  game.AddLetter("a");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

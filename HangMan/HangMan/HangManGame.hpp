@@ -12,11 +12,12 @@ public:
   HangManGame(const HangManGame&) = delete;
   HangManGame& operator = (const HangManGame&) = delete;
 
-  void AddLetter(std::string letter);
-  int GetHangManStateCopy() const;
-  std::string GetCurrentWordCopy() const;
+  void AddLetter(const std::string& letter);
+  int GetHangManState() const;
+  std::string GetCurrentWord() const;
   bool CheckIfWon() const;
 
 private:
- 
+  void SetLetter(char letter);
+  
 };
