@@ -52,9 +52,9 @@ void HangManGame::AddLetter(const std::string& letter)
   else
   {
     hangManState_++;
-    if (maxErrors_ > hangManState_)
+    if (maxErrors_ < hangManState_)
     {
-      throw std::exception{ "You lost! " };
+      throw std::exception{ "You already lost! " };
     }
   }
 }
@@ -80,4 +80,14 @@ bool HangManGame::CheckIfWon() const
   {
     return true;
   }
+}
+
+int HangManGame::GetHangManState() const
+{
+  return hangManState_;
+}
+
+std::string HangManGame::GetCurrentWord() const
+{
+  return currentWord_;
 }

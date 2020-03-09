@@ -6,9 +6,13 @@
 
 int main()
 {
-  HangManGame game{ "Machine Learning" };
+  HangManGame game{ "Machine Learning", 10 };
   game.AddLetter("a");
+  game.AddLetter("m");
+  game.AddLetter("e");
   game.AddLetter("q");
+  auto s = game.CheckIfWon();
+  auto a = game.GetCurrentWord();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
