@@ -19,5 +19,6 @@ public:
 
 private:
   void SetLetter(char letter);
-  
+  std::string CreateUnderscores(int length);
+  std::string LowerString(std::string word);
 };

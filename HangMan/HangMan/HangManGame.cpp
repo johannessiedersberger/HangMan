@@ -3,10 +3,18 @@
 
 #include "HangManGame.hpp"
 
-static std::string LowerString(std::string word)
+
+HangManGame::HangManGame(const std::string& word)
 {
-  // convert string to back to lower case
-  std::string newString = "";
+  if (word.length() == 0 || word.empty())
+    throw std::invalid_argument{ "The word is to short" };
+
+  wordToGuess_ = LowerString(word);
+  currentWord_ = CreateUnderscores(word.length());
+}
+
+std::string HangManGame::LowerString(std::string word)
+{
   for (size_t i = 0; i < word.length(); i++)
   {
     word[i] = std::tolower(word[i]);
@@ -14,16 +22,11 @@ static std::string LowerString(std::string word)
   return word;
 }
 
-static std::string CheckWord(const std::string& word)
+std::string HangManGame::CreateUnderscores(int length)
 {
-  if (word.length() == 0 || word.empty())
-    throw std::invalid_argument{ "The word is to short" };
-  return LowerString(word);
-}
-
-HangManGame::HangManGame(const std::string& word)
-  : wordToGuess_(CheckWord(word))
-{
+  std::string underscores = "";
+  underscores.resize(length, '_');
+  return underscores;
 }
 
 void HangManGame::AddLetter(const std::string& letter)
