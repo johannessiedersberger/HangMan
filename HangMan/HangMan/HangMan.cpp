@@ -8,6 +8,7 @@ int main()
 {
   HangManGame game{ "Machine Learning" };
   game.AddLetter("a");
+  game.AddLetter("q");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

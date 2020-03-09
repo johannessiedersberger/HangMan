@@ -4,13 +4,15 @@
 #include "HangManGame.hpp"
 
 
-HangManGame::HangManGame(const std::string& word)
+HangManGame::HangManGame(const std::string& word, int maxErrors)
 {
   if (word.length() == 0 || word.empty())
     throw std::invalid_argument{ "The word is to short" };
 
   wordToGuess_ = LowerString(word);
   currentWord_ = CreateUnderscores(word.length());
+  hangManState_ = 0;
+  maxErrors_ = 10;
 }
 
 std::string HangManGame::LowerString(std::string word)
@@ -43,13 +45,17 @@ void HangManGame::AddLetter(const std::string& letter)
     lettersPicked_.append(letter);
   }
 
-  if (wordToGuess_.find(letter))
+  if (wordToGuess_.find(letter) != std::string::npos)
   {
     SetLetter(letter[0]);
   }
   else
   {
     hangManState_++;
+    if (maxErrors_ > hangManState_)
+    {
+      throw std::exception{ "You lost! " };
+    }
   }
 }
 
@@ -61,5 +67,17 @@ void HangManGame::SetLetter(char letter)
     {
       currentWord_[i] = letter;
     }
+  }
+}
+
+bool HangManGame::CheckIfWon() const
+{
+  if (currentWord_.find('_') != std::string::npos)
+  {
+    return false;
+  }
+  else
+  {
+    return true;
   }
 }
