@@ -35,19 +35,21 @@ void HangManGame::AddLetter(const std::string& letter)
 {
   if (letter.length() != 1)
     throw std::invalid_argument{ "Pass just One Letter!" };
+  
+  std::string lowerLetter = LowerString(letter);
 
-  if (lettersPicked_.find(letter) != std::string::npos)
+  if (lettersPicked_.find(lowerLetter) != std::string::npos)
   {
     throw std::invalid_argument{ "You already used this letter!" };
   }
   else
   {
-    lettersPicked_.append(letter);
+    lettersPicked_.append(lowerLetter);
   }
 
-  if (wordToGuess_.find(letter) != std::string::npos)
+  if (wordToGuess_.find(lowerLetter) != std::string::npos)
   {
-    SetLetter(letter[0]);
+    SetLetter(lowerLetter[0]);
   }
   else
   {

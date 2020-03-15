@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+
 class HangManGame
 {
   std::string wordToGuess_;
