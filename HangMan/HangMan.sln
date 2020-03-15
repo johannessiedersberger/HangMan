@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HangMan", "HangMan\HangMan.vcxproj", "{18F6FCFF-FA66-4A66-B892-3B138430BAAF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HangManTest", "HangManTest\HangManTest.vcxproj", "{5677961B-8EAD-4297-9451-5C66E07704A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{18F6FCFF-FA66-4A66-B892-3B138430BAAF}.Release|x64.Build.0 = Release|x64
 		{18F6FCFF-FA66-4A66-B892-3B138430BAAF}.Release|x86.ActiveCfg = Release|Win32
 		{18F6FCFF-FA66-4A66-B892-3B138430BAAF}.Release|x86.Build.0 = Release|Win32
+		{5677961B-8EAD-4297-9451-5C66E07704A4}.Debug|x64.ActiveCfg = Debug|x64
+		{5677961B-8EAD-4297-9451-5C66E07704A4}.Debug|x64.Build.0 = Debug|x64
+		{5677961B-8EAD-4297-9451-5C66E07704A4}.Debug|x86.ActiveCfg = Debug|Win32
+		{5677961B-8EAD-4297-9451-5C66E07704A4}.Debug|x86.Build.0 = Debug|Win32
+		{5677961B-8EAD-4297-9451-5C66E07704A4}.Release|x64.ActiveCfg = Release|x64
+		{5677961B-8EAD-4297-9451-5C66E07704A4}.Release|x64.Build.0 = Release|x64
+		{5677961B-8EAD-4297-9451-5C66E07704A4}.Release|x86.ActiveCfg = Release|Win32
+		{5677961B-8EAD-4297-9451-5C66E07704A4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
