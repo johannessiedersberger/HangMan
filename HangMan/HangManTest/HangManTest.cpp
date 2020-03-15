@@ -1,20 +1,11 @@
-// HangMan.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// HangManTest.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-#include "HangManGame.hpp"
 
-int main(int argc, char* argv[])
+int main()
 {
-  HangManGame game{ "Machine Learning", 10 };
-  game.AddLetter("a");
-  game.AddLetter("m");
-  game.AddLetter("e");
-  game.AddLetter("q");
-  auto won = game.CheckIfWon();
-  auto word = game.GetCurrentWord();
-  auto hangMan = game.GetHangManState();
-  
+    std::cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
