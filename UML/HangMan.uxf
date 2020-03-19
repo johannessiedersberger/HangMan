@@ -14,7 +14,7 @@
 --
 +DrawGame(HangManGame: game): void
 +AskForLetter(): string
-
++AskForWordToGuess(): void
 </panel_attributes>
     <additional_attributes/>
   </element>

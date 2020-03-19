@@ -21,9 +21,15 @@
     <ClCompile Include="HangManGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HangManDrawer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HangManGame.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HangManDrawer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

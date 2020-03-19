@@ -11,7 +11,7 @@ class HangManGame
 
 public:
   HangManGame(const std::string& word, int maxErrors);
-  HangManGame(const HangManGame&) = delete;
+  //HangManGame(const HangManGame&) = delete;
   HangManGame& operator = (const HangManGame&) = delete;
 
   void AddLetter(const std::string& letter);

@@ -3,17 +3,20 @@
 
 #include <iostream>
 #include "HangManGame.hpp"
+#include "HangManDrawer.hpp"
 
 int main(int argc, char* argv[])
 {
-  HangManGame game{ "Machine Learning", 10 };
-  game.AddLetter("a");
-  game.AddLetter("m");
-  game.AddLetter("e");
-  game.AddLetter("q");
-  auto won = game.CheckIfWon();
-  auto word = game.GetCurrentWord();
-  auto hangMan = game.GetHangManState();
+
+  auto wordToGuess = HangManDrawer::AskForWord();
+  HangManGame game{ wordToGuess, 6 };
+  while (game.CheckIfWon() == false && game.GetHangManState() < 6)
+  {
+    auto letter = HangManDrawer::AskForLetter();
+    game.AddLetter(letter);
+    HangManDrawer::DrawGame(game);
+  }
+  
   
 }
 
