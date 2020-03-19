@@ -93,3 +93,8 @@ std::string HangManGame::GetCurrentWord() const
 {
   return currentWord_;
 }
+
+std::string HangManGame::GetLettersPicked() const
+{
+  return lettersPicked_;
+}

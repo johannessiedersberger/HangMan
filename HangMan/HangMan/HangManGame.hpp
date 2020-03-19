@@ -18,6 +18,7 @@ public:
   int GetHangManState() const;
   std::string GetCurrentWord() const;
   bool CheckIfWon() const;
+  std::string GetLettersPicked() const;
 
 private:
   void SetLetter(char letter);
