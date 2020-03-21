@@ -12,7 +12,7 @@ HangManGame::HangManGame(const std::string& word, int maxErrors)
   wordToGuess_ = LowerString(word);
   currentWord_ = CreateUnderscores(word.length());
   hangManState_ = 0;
-  maxErrors_ = 10;
+  maxErrors_ = maxErrors;
 }
 
 std::string HangManGame::LowerString(std::string word)
@@ -58,6 +58,7 @@ void HangManGame::AddLetter(const std::string& letter)
     {
       throw std::exception{ "You already lost! " };
     }
+    
   }
 }
 

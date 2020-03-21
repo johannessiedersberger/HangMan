@@ -99,7 +99,7 @@ void PrintHangMan(int errors)
     cout << " |    |  " << endl;
     cout << " |   _O_ " << endl;
     cout << " |    |  " << endl;
-    cout << " |   / \ " << endl;
+    cout << " |   / \\" << endl;
     cout << "_|___    " << endl;
     cout << endl;
     break;
@@ -112,6 +112,7 @@ std::string HangManDrawer::AskForLetter()
   bool inputCorrect = false;;
   while (!inputCorrect)
   {
+    cout << "Letter: ";
     cin >> letter;
     if (letter.length() == 1)
       inputCorrect = true;

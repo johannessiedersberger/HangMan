@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <stdexcept>
 #include "HangManGame.hpp"
 #include "HangManDrawer.hpp"
 
@@ -10,14 +11,25 @@ int main(int argc, char* argv[])
 
   auto wordToGuess = HangManDrawer::AskForWord();
   HangManGame game{ wordToGuess, 6 };
-  while (game.CheckIfWon() == false && game.GetHangManState() < 6)
+  while (game.GetHangManState() < 6)
   {
-    auto letter = HangManDrawer::AskForLetter();
-    game.AddLetter(letter);
-    HangManDrawer::DrawGame(game);
+    try
+    {
+      auto letter = HangManDrawer::AskForLetter();
+      game.AddLetter(letter);
+      std::system("cls");
+      HangManDrawer::DrawGame(game);
+    }
+    catch (const std::exception& e)
+    {
+      std::cout << e.what() << std::endl;
+    }
   }
-  
-  
+
+  if (game.CheckIfWon())
+    std::cout << "YOU WON :)" << std::endl;
+  else
+    std::cout << "YOU LOST :(" << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
