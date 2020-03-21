@@ -5,9 +5,6 @@
 #include "HangManDrawer.hpp"
 using namespace std;
 
-void PrintCurrentWordState(HangManGame game);
-void PrintLettersPicked(HangManGame game);
-void PrintHangMan(int errors);
 
 void HangManDrawer::DrawGame(HangManGame game)
 {
@@ -16,7 +13,7 @@ void HangManDrawer::DrawGame(HangManGame game)
   PrintHangMan(game.GetHangManState());
 }
 
-void PrintCurrentWordState(HangManGame game)
+void HangManDrawer::PrintCurrentWordState(HangManGame game)
 {
   cout << "Current Word State: ";
   for (size_t i = 0; i < game.GetCurrentWord().length(); i++)
@@ -26,7 +23,7 @@ void PrintCurrentWordState(HangManGame game)
   cout << endl;
 }
 
-void PrintLettersPicked(HangManGame game)
+void HangManDrawer::PrintLettersPicked(HangManGame game)
 {
   cout << "Letters Picked: ";
   for (size_t i = 0; i < game.GetLettersPicked().length(); i++)
@@ -36,7 +33,7 @@ void PrintLettersPicked(HangManGame game)
   cout << endl;
 }
 
-void PrintHangMan(int errors)
+void HangManDrawer::PrintHangMan(int errors)
 {
   switch (errors)
   {

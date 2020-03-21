@@ -10,6 +10,8 @@ public:
   static std::string AskForWord();
 
 private:
-
+  static void PrintCurrentWordState(HangManGame game);
+  static void PrintLettersPicked(HangManGame game);
+  static void PrintHangMan(int errors);
 };
 
